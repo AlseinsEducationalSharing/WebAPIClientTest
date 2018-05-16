@@ -1,0 +1,33 @@
+{
+    // Use IntelliSense to find out which attributes exist for C# debugging
+    // Use hover for the description of the existing attributes
+    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Server",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build server",
+            "program": "${workspaceFolder}/src/WebAPIClientTest.Server/bin/Debug/netcoreapp2.0/WebAPIClientTest.Server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/WebAPIClientTest.Server",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+        },
+        {
+            "name": "Launch Client",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build client",
+            "program": "${workspaceFolder}/src/WebAPIClientTest.Client/bin/Debug/netcoreapp2.0/WebAPIClientTest.Client.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/WebAPIClientTest.Client",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+    ]
+}
