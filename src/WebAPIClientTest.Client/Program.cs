@@ -35,7 +35,7 @@ namespace WebAPIClientTest.Client
             Console.ReadKey();
         }
 
-        private static async Task<IEnumerable<string>> LoadFromServerAsync(User user, string path = "http://localhost.fiddler:5000/api/data")
+        private static async Task<IEnumerable<string>> LoadFromServerAsync(User user, string path = "http://localhost:5000/api/data")
         {
             using (var client = new HttpClient())
             using (var content = new StringContent(JsonConvert.SerializeObject(user)))
